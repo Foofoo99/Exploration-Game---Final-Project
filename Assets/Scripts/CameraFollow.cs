@@ -10,6 +10,6 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         //make the camera follow the player in first person
-        playerCamera.transform.position = new Vector3(playerRB.transform.position.x, playerRB.transform.position.y + 0.5f, playerRB.transform.position.z);
+        playerCamera.transform.position = new Vector3(playerRB.transform.position.x, playerRB.transform.position.y + 0.48f, playerRB.transform.position.z);
     }
 }

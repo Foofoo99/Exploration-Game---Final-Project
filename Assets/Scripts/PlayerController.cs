@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private int consecClicks = 0, maxClicks = 9;
     private float timeLastClicked = -1, maxTimeInterval = 0.2f;
 
-
+    RaycastHit hitObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         float grappleDistance = AdvancedSettings.grappleDistance;
         Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         //detect the thing to grapple with, then the position of that thing, then move toward that position
-        if(Physics.Raycast(cameraRay, out RaycastHit hitObject, grappleDistance) && hitObject.collider.name.StartsWith("Grapple") && canGrapple)
+        if (Physics.Raycast(cameraRay, out hitObject, grappleDistance) && hitObject.collider.name.StartsWith("Grapple") && canGrapple)
         {
             //set crosshair color
             crosshair1.color = Color.green;
