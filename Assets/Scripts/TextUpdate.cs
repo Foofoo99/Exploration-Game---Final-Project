@@ -27,7 +27,7 @@ public class TextUpdate : MonoBehaviour
             }
             if(playerController.grappleDeathCheck && AdvancedSettings.showDeath)
             {
-                deathText.text = "Grappling hook overheated (stop spam clicking!)";
+                deathText.text = "Grappling hook exploded (stop spam clicking!)";
             }
             else if(AdvancedSettings.showDeath)
             {
