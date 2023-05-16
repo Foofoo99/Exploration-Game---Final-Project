@@ -41,7 +41,15 @@ public class TextUpdate : MonoBehaviour
         //show the timer text formatted properly if it wasn't turned off in advanced settings
         if(AdvancedSettings.showTimer)
         {
-            timerText.SetText("Time: " + TimeKeeper.tenMinutes.ToString("n0") + TimeKeeper.currentMinutes.ToString("n0") + ":" + TimeKeeper.tenSeconds.ToString("n0") + TimeKeeper.currentSeconds.ToString("n2"));
+            if(TimeKeeper.tenMinutes >= 6)
+            {
+                timerText.SetText("Time: A really long time");
+            }
+            else
+            {
+                timerText.SetText("Time: " + TimeKeeper.tenMinutes.ToString("n0") + TimeKeeper.currentMinutes.ToString("n0") + ":" + TimeKeeper.tenSeconds.ToString("n0") + TimeKeeper.currentSeconds.ToString("n2"));
+            }
+            
         }
         if(AdvancedSettings.showAchievements)
         {
